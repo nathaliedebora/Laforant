@@ -1,0 +1,479 @@
+@font-face {
+    font-family: 'TITANFALL FRONTLINE';
+    src: url('../asset/font/TITANFALLFRONTLINE.eot');
+    src: url('../asset/font/TITANFALLFRONTLINE.eot?#iefix') format('embedded-opentype'),
+        url('../asset/font/TITANFALLFRONTLINE.woff2') format('woff2'),
+        url('../asset/font/TITANFALLFRONTLINE.woff') format('woff'),
+        url('../asset/font/TITANFALLFRONTLINE.svg#TITANFALLFRONTLINE') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    letter-spacing: .2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 11vh;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2.5px solid #fa4454;
+}
+
+.dropdown{
+    width: 100%;
+    height: 11vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-info-btn{
+    position: relative;
+    z-index: 2;
+}
+
+.game-info-btn ul{
+    background-color: black;
+    position: absolute;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.game-info-btn li, .game-info-btn a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info-btn li:hover{
+    background-color: crimson;
+}
+
+.dropdown button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15pt;
+}
+
+.dropdown button:hover, .nav-btn:hover, #dropdown-home:hover{
+    color: rgb(184, 184, 184);
+}
+
+#logo-navbar{
+    width: 14vw;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.skewed{
+    position: relative;
+}
+
+.skewed::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    pointer-events: none;
+    background: url('../asset/footer-sliver.png') bottom right no-repeat;
+}
+
+#intro{
+    height: 140vh;
+    background: linear-gradient(rgba(20, 20, 20, 0.5),rgba(20, 20, 20, 0.5)),url('../asset/home-wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+#intro-text{
+    display: flex;
+    flex-direction: column;
+    text-shadow: 3px 3px 3px black, 
+    3px 3px 3px black,
+    3px 3px 3px black,
+    3px 3px 3px black;
+}
+
+#intro-text span{
+    margin: 0 0 10px 0;
+}
+
+#intro-text-title{
+    font-family: 'TITANFALL FRONTLINE';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 52pt;
+}
+
+#intro-text-desc{
+    font-size: 1.4em;
+}
+
+#intro-text-launch{
+    font-size: 2.5em;
+}
+
+#pre-btn{
+    position: relative;
+    margin: 50px 0 0 0;
+    padding: 10px 20px;
+    border: 2px solid white;
+    transition: all .7s ease;
+}
+
+#pre-btn:hover{
+    background-color: #942736;
+    border-color: rgb(222, 222, 222);
+}
+
+#pre-btn:hover b{
+    color: rgb(222, 222, 222);
+}
+
+#game-info{
+    height: 110vh;
+    background: url('../asset/bg-marble.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.game-info-container{
+    display: flex;
+}
+
+.game-info-container *{
+    text-align: start;
+    color: black;
+}
+
+.game-info-container .animate-text{
+    width: 40%;
+    margin: 0 0 0 5vw;
+}
+
+h5{
+    font-size: 1.2rem;
+}
+
+#agents-info{
+    height: 110vh;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 70%),
+    url('../asset/bg-agents.png') no-repeat;
+    background-size: cover;
+}
+
+#agents-pic{
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#agents-pic img{
+    margin-bottom: 12%;
+    height: 110vh;
+}
+
+#agents-text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes floating{
+    0% { transform: translate(0, 0px);}
+    50% { transform: translate(0, 15px);}
+    100% { transform: translate(0, -0px);}
+}
+
+#maps-info{
+    height: 110vh;
+}
+
+#maps-pic{
+    width: 50%;
+    height: 100%;
+    background: url('../asset/map-bg-cropped.jpg') no-repeat;
+    background-size: cover;
+}
+
+#maps-text{
+    width: 50%;
+    height: 100%;
+    background: url('../asset/bg-marble.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#maps-text .animate-text h1, #maps-text .animate-text p{
+    color: black;
+}
+
+#maps-text .animate-text, #agents-text .animate-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.animate-text img, .animate-text h5, .animate-text h1, .animate-text p{
+    margin: 1vw 0;
+}
+
+.animate-text p{
+    text-align: start;
+}
+
+.animate-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.2s ease;
+}
+
+.animate-text.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.module-text{
+    font-size: 1.1em;
+    letter-spacing: 0.04em;
+}
+
+.module-btn{
+    width: 16rem;
+    position: relative;
+    background: none;
+    color: crimson;
+    padding: 15px 30px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: none;
+    transition: .5s linear;
+    transition-delay: 0s;
+}
+.module-btn:hover{
+    background: crimson;
+    color: white;
+    transition: .5s linear;
+    transition-delay: 1s;
+}
+.module-btn span{
+    display: block;
+    position: absolute;
+}
+.module-btn span:nth-child(1){
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, crimson);
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.module-btn:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.module-btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, crimson);
+    transition: 0.5s;
+    transition-delay: 0.75s;
+}
+.module-btn:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.module-btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, crimson);
+    transition: 0.7s;
+    transition-delay: 0.25s;
+}
+.module-btn:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.module-btn span:nth-child(4){
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent, crimson);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.module-btn:hover span:nth-child(4){
+    top: -100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.middle-logo, #dropdown-home, .burger{
+    display: none;
+}
+
+.middle-logo *{
+    background-color: black;
+}
+
+.burger div{
+    width: 27px;
+	height: 3px;
+	background-color: rgb(228,228,228);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+footer{
+    background: url('../asset/bg-footer.jpg') top right repeat;
+    padding: 5vh 10vw;
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer li{
+    padding: 0 7px;
+    margin-bottom: 8px;
+}
+
+footer i{
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@media only screen and (max-width:700px){
+    #agents-pic{
+        display: none;
+    }
+    #maps-text{
+        width: 100%;
+    }
+    #maps-pic{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:800px){
+    body{
+        overflow-x: hidden;
+    }
+    .middle-logo{
+        display: flex;
+        width: 50vw;
+    }
+    .middle-logo #logo-navbar{
+        width: 12em;
+    }
+    #dropdown-home{
+        display: block;
+    }
+    .home img{
+        display: none;
+    }
+    .dropdown{
+        position: absolute;
+		right: 0;
+		height: 60vh;
+		top: 11.3vh;
+        background-color: black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 40%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+    }
+    .burger{
+		display: block;
+		cursor: pointer;
+	}
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px, -6px);
+}
